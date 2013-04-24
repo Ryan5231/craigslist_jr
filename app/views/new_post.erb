@@ -1,0 +1,38 @@
+<div class = "container">
+  <form name="input" action="/post/create" method="post">
+    Post title: <br/>
+    <input class="input_field" type="text" name="title"> <br/>
+    Enter a description of your post: <br/>
+    <input id="content_field" type="text" name="content"><br/>
+    Enter the price of your item: <br/>
+    <input class="input_field" type="text" name="price"><br/>
+    Enter your email: <br/>
+    <input class="input_field" type="text" name="user_email"><br/>
+    Enter your post category: <br/>
+    <select name="categories_id">
+      <% Category.all.each do |cat| %>
+      <option value=" <%=cat.id%> "> <%= cat.name %>  </option>
+      <% end %>
+    </select><br/><br/>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!-- come back to this; input fields should be aligned at top
+  and wrap -->
+
+<!--
+  
+  To get this to work, they're going to have to select 
+  from a dropdown menu  of category choices;
+  these are the contents of Category.all
+
+
+  -->
+
+
+<!--     <select name="category">
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+      <option value="option3">option 3</option>
+    </select><br/><br/> -->

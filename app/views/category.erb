@@ -1,0 +1,12 @@
+<div class="container">
+
+  <h1><%= @category.name %></h1>
+
+  <% Post.find_all_by_categories_id(@category.id).each do |post| %>
+    <a href="post/<%= post.id %>">  <%= post.title %> </a><br>
+  <% end %>
+
+</div>
+
+
+<!-- Post.find_by_category_id(cat.id) -->
